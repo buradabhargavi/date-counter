@@ -6,8 +6,8 @@ interface val {
 }
 function Count(props: val) {
   // console.log(props.value);
-  const today = new Date();
-  const date = today;
+
+  const date = new Date();
 
   const [count, setCount] = useState(0);
 

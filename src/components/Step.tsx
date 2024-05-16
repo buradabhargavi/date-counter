@@ -6,10 +6,10 @@ import "./Step.css";
 function Step() {
   const [step, setStep] = useState<number>(0);
   const decHandler = () => {
-    setStep(step - 1);
+    setStep((step) => step - 1);
   };
   const incHandler = () => {
-    setStep(step + 1);
+    setStep((step) => step + 1);
   };
 
   return (
