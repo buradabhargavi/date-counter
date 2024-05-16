@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: #61dafb;
+  margin: 5% 20%;
+  border-radius: 10px;
+  padding: 5% 10%;
 }
 
 .App-logo {
@@ -34,5 +38,10 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  .App {
+    margin: 5% 10%;
   }
 }

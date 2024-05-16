@@ -1,11 +1,15 @@
 import React from "react";
+import Step from "./components/Step";
+//import Count from "./components/Count";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>this is app</p>
+      <h1>DATE COUNTER</h1>
+      <Step></Step>
+      {/*  <Count></Count> */}
     </div>
   );
 }
