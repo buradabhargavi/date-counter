@@ -43,6 +43,7 @@ button {
   width: 80px;
   background-color: rgb(52, 124, 64);
   border: 1px solid rgb(8, 66, 17);
+  margin-top: 20px;
 }
 .range {
   width: 300px;
