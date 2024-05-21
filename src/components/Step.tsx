@@ -4,7 +4,8 @@ import Count from "./Count";
 import "./Step.css";
 
 function Step() {
-  const [step, setStep] = useState<number>(0);
+  const [step, setStep] = useState<number>(1);
+
   /*  const decHandler = () => {
     setStep((step) => step - 1);
   };

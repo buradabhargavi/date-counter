@@ -12,23 +12,11 @@ function Count(props: val) {
   const [count, setCount] = useState<number>(0);
 
   const decHandler = () => {
-    setCount((count) => {
-      if (props.value === 0) {
-        return count - 1;
-      } else {
-        return count - props.value;
-      }
-    });
+    setCount((count) => count - props.value);
   };
 
   const incHandler = () => {
-    setCount((count) => {
-      if (props.value === 0) {
-        return count + 1;
-      } else {
-        return count + props.value;
-      }
-    });
+    setCount((count) => count + props.value);
   };
 
   const resetHandler = () => {
