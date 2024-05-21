@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .datecls {
   display: inline;
@@ -31,4 +33,27 @@ button {
 .dec {
   background-color: rgb(230, 157, 63);
   border: 1px solid rgb(186, 108, 7);
+}
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reset button {
+  width: 80px;
+  background-color: rgb(52, 124, 64);
+  border: 1px solid rgb(8, 66, 17);
+}
+.range {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .range {
+    width: 200px;
+  }
+  input {
+    width: 80px;
+  }
 }

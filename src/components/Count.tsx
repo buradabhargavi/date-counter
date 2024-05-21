@@ -9,7 +9,7 @@ function Count(props: val) {
 
   const date = new Date();
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   const decHandler = () => {
     setCount((count) => {
@@ -30,6 +30,11 @@ function Count(props: val) {
       }
     });
   };
+
+  const resetHandler = () => {
+    setCount(0);
+  };
+
   date.setDate(date.getDate() + count);
   const dateString = date.toDateString();
   //console.log(dateString);
@@ -40,7 +45,13 @@ function Count(props: val) {
         <button onClick={decHandler} className="dec">
           -
         </button>
-        <span>Count : {count}</span>
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => {
+            setCount(Number(e.target.value));
+          }}
+        ></input>
         <button onClick={incHandler} className="inc">
           +
         </button>
@@ -56,6 +67,9 @@ function Count(props: val) {
             : ""}
         </p>
         <p className="datecls">{dateString}</p>
+      </div>
+      <div className="reset">
+        <button onClick={resetHandler}>reset</button>
       </div>
     </>
   );

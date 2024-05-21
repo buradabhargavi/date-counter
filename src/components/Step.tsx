@@ -5,16 +5,26 @@ import "./Step.css";
 
 function Step() {
   const [step, setStep] = useState<number>(0);
-  const decHandler = () => {
+  /*  const decHandler = () => {
     setStep((step) => step - 1);
   };
   const incHandler = () => {
     setStep((step) => step + 1);
-  };
+  }; */
 
   return (
     <div className="mainContainer">
-      <div className="step">
+      <input
+        className="range"
+        type="range"
+        min="0"
+        max="10"
+        value={step}
+        onChange={(e) => setStep(Number(e.target.value))}
+      ></input>
+      <span>{step}</span>
+
+      {/* <div className="step">
         <button onClick={decHandler} className="dec">
           -
         </button>
@@ -22,7 +32,7 @@ function Step() {
         <button onClick={incHandler} className="inc">
           +
         </button>
-      </div>
+      </div> */}
       <Count value={step}></Count>
     </div>
   );
